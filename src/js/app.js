@@ -39,17 +39,21 @@ function render(variables = {}) {
   let country =
     variables.country == null ? ` Country</h3>` : `${variables.country}</h3>`;
   let twitter =
-    variables.twitter == null ? `https://x.com` : `${variables.twitter}`;
+    variables.twitter == null
+      ? `https://x.com`
+      : `https://x.com/${variables.twitter}`;
   let github =
-    variables.github == null ? `https://github.com` : `${variables.github}`;
+    variables.github == null
+      ? `https://github.com`
+      : `https://github.com/${variables.github}`;
   let linkedin =
     variables.linkedin == null
       ? `https://www.linkedin.com/feed/`
-      : `${variables.linkedin}`;
+      : `https://www.linkedin.com/${variables.linkedin}`;
   let instagram =
     variables.instagram == null
       ? `https://www.instagram.com`
-      : `${variables.instagram}`;
+      : `https://www.instagram.com/${variables.instagram}`;
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
           ${cover}
